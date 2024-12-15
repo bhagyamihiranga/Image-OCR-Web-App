@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NETRAY SOLUTIONS</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "Roboto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body{
+            background-color: #1b1b1b;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+    
+        .newsletter-form {
+            width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 8px;
+            background-color: #f7f7f7;
+            font-family: Arial, sans-serif;
+            box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+           
+          }
+          
+          .heading {
+            font-weight: bold;
+            font-size: 20px;
+          }
+          
+          .newsletter-form h2 {
+            margin-top: 0;
+            color: #333;
+            font-size: 24px;
+          }
+          
+          .newsletter-form label {
+            display: block;
+            font-weight: bold;
+            color: #666;
+            margin-bottom: 10px;
+          }
+          
+          .newsletter-form input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+          }
+          
+          .newsletter-form input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #ff6600;
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+          }
+          
+          .newsletter-form input[type="submit"]:hover {
+            background-color: #ff8533;
+          }
+          .container-main{
+            width: 100%;
+            display : flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 400px;
+          }
+        
+    </style>
+</head>
+<body>
+    
+
+ <div class="container-main">
+    <div class="newsletter-form">
+        <p class="heading"> Enter your Image url</p>
+        <form class="form" method = "POST">
+          <label for="email">Enter You'r Image url :</label>
+          <input required="" placeholder="Enter your url address" name="img" id="img" type="url">
+          <input value="Convert" type="submit">
+        </form>
+      </div>
+ </div>
+   
+</body>
+</html>

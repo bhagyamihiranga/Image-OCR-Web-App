@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: "Roboto", serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        body{
+            background-color: #1b1b1b;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            justify-content: center;
+        }
+        .card {
+            width: 390px;
+            padding: 50px ;
+            margin: 0 auto;
+            background-color: #011522;
+            border-radius: 8px;
+            z-index: 1;
+           }
+           
+           .tools {
+            display: flex;
+            align-items: center;
+            padding: 9px;
+           }
+           
+           .circle {
+            padding: 0 4px;
+           }
+           
+           .box {
+            display: inline-block;
+            align-items: center;
+            width: 10px;
+            height: 10px;
+            padding: 1px;
+            border-radius: 50%;
+           }
+           
+           .red {
+            background-color: #ff605c;
+           }
+           
+           .yellow {
+            background-color: #ffbd44;
+           }
+           
+           .green {
+            background-color: #00ca4e;
+           }
+           .container-main{
+            width: 100%;
+            margin-top: 300px;
+            color : #fff
+           }
+           /* From Uiverse.io by mrhyddenn */ 
+button {
+    background: #fff;
+    border: none;
+    padding: 10px 20px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    width: 120px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transform: skew(-21deg);
+  }
+  
+  span {
+    display: inline-block;
+    transform: skew(21deg);
+  }
+  
+  button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 100%;
+    left: 0;
+    background: rgb(20, 20, 20);
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s;
+  }
+  
+  button:hover {
+    color: #fff;
+  }
+  
+  button:hover::before {
+    left: 0;
+    right: 0;
+    opacity: 1;
+  }
+  .bustton{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+  }
+    </style>
+</head>
+<body>
+     
+    <div class="container-main">
+        <div class="card">
+            <div class="tools">
+              <div class="circle">
+                <span class="red box"></span>
+              </div>
+              <div class="circle">
+                <span class="yellow box"></span>
+              </div>
+              <div class="circle">
+                <span class="green box"></span>
+              </div>
+            </div>
+            <div class="card__content">
+                <p>{{content}}</p>
+            </div>
+          </div>
+
+          <div class="bustton">
+            <form action="/download" method = "POST">
+
+                <button>
+                    <span>Dwonload</span>
+                </button>
+
+
+            </form>
+          </div>
+    </div>
+</body>
+</html>
