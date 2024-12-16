@@ -1,5 +1,34 @@
-How to Set img src using
-css
+Re RECS, SINEY SIPS ere NI SORE tS Or ey CEES On Cee CnaTenEN eS
+‘sphere, it makes the upperside appear lighter and the underside darker, grading from one to the
+‘other. This pattern of light and shade makes the object appear solid, and therefore easier to detect.
+‘The classical form of countershading. discovered in 1909 by the artist Abbott Henderson Thayer.
+works by counterbalancing the effects of self-shadowing, again typically with grading from dark to
+light. n theory this could be useful for military camouflage, butin practice it has rarely been applied,
+despite the best efforts of Thayer and, later, in the Second World Wer, ofthe zoologist Hugh Cott.
+‘The precise function of various patterns of animal coloration that have been called countershading
+hhas been debated by 2oologists such as Hannah Rowland (2008), with the suggestion that there may
+’be multiple functions including flattening and background matching when viewed from the side;
+background matching when viewed from above or below, implying separate color schemes for the
+top and bottom surfaces; outline obliteration from above; and a variety of other largely untested non-
+camouflage theories. A related mechanism, counter-illumination, adds the creation of light
 
-5)
+by bioluminescence or lamps to match the actual brightness of a background. Counter-illumination
+‘camouflage is common in marine organisms such as squid. It has been studied up to
+
+the prototype stage Mimicry(L. mimus, to imitate) occurs when a species resembles one, or
+sometimes more than one, other species and gains protection by the resemblance.
+
+in evolutionary biology, mimicry is an evolved resemblance between an organism and another object,
+‘often an organism of another species. Mimicry may evolve between diferent species, or between
+individuals of the same species. Often, mimicry functions to protect a species from predators, making
+itan antipredator adaptation. Mimicry evolves if receiver (such as a predator) perceives the
+similarity between a mimic (the organism that has a resemblance) and a model (the organism it
+resembles) and as 3 result changes its behavior in a way that provides a selective advantage to the
+‘mimic. The resemblances that evolve in mimicry can be visual, acoustic, chemical, tactile, or electric,
+‘or combinations of these sensory modalities.
+
+‘Mimicry may be to the advantage of both organisms that share a resemblance, in which case itis @
+form of mutualism; or mimicry can be to the detriment of one, making it parasitic or competitive. The
+
+evolutionary convergence between groups is driven by the selective action of a signal-receiver or
 

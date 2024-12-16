@@ -14,45 +14,97 @@ def index():
     elif request.method == "POST":
         if os.path.isfile('./download.png'):
            os.remove('download.png')
-           
+          
+           if request.form.get('url') == "":
+               if  request.files['img'].filename == '':
+                    return redirect('/')
+               else:
+                   file = request.files['img']
+                   file.save(dst='./download.png')
+                   try:
+                     
+                        img_data = cv2.imread('./download.png')
+                        grey = cv2.cvtColor(img_data,cv2.COLOR_BGR2RGB)
+                                
+                        pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+                        convert_data = pytesseract.image_to_string(grey)
+                                
+                                
+                        with open('test.txt','w',encoding='utf-8') as file:
+                                file.write(convert_data)
+                                session['sucess'] = convert_data
+                                return redirect('/download')
+                            
+                   except Exception as e:
+                              return redirect('/')
+           else:
+                 
+                  try:
+                    wget.download(url=request.form.get('url'),out='download.png')
+                    img_data = cv2.imread('./download.png')
+                    grey = cv2.cvtColor(img_data,cv2.COLOR_BGR2RGB)
+                            
+                    pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+                    convert_data = pytesseract.image_to_string(grey)
+                            
+                            
+                    with open('test.txt','w',encoding='utf-8') as file:
+                            file.write(convert_data)
+                            session['sucess'] = convert_data
+                            return redirect('/download')
+                        
+                  except Exception as e:
+                       return redirect('/')
+                
             
 
-           try:
-                wget.download(url=request.form.get('img'),out='download.png')
-                img_data = cv2.imread('./download.png')
-                grey = cv2.cvtColor(img_data,cv2.COLOR_BGR2RGB)
-                        
-                pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
-                convert_data = pytesseract.image_to_string(img_data)
-                        
-                        
-                with open('test.txt','w',encoding='utf-8') as file:
-                        file.write(convert_data)
-                        session['sucess'] = convert_data
-                        return redirect('/download')
-                    
-           except Exception as e:
-                return redirect('/')
+          
         else:
            
             
 
-            try:
-                wget.download(url=request.form.get('img'),out='download.png')
-                img_data = cv2.imread('./download.png')
-                grey = cv2.cvtColor(img_data,cv2.COLOR_BGR2RGB)
+           if request.form.get('url') == "":
+               if request.files['img'].filename == '':
+                    return redirect('/')
+               else:
+                   file = request.files['img']
+                   file.save(dst='./download.png')
+                   try:
+                      
+                        img_data = cv2.imread('./download.png')
+                        grey = cv2.cvtColor(img_data,cv2.COLOR_BGR2RGB)
+                                
+                        pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+                        convert_data = pytesseract.image_to_string(grey)
+                                
+                                
+                        with open('test.txt','w',encoding='utf-8') as file:
+                                file.write(convert_data)
+                                session['sucess'] = convert_data
+                                return redirect('/download')
+                            
+                   except Exception as e:
+                              return redirect('/')
+           else:
+                 
+                  try:
+                    wget.download(url=request.form.get('url'),out='download.png')
+                    img_data = cv2.imread('./download.png')
+                    grey = cv2.cvtColor(img_data,cv2.COLOR_BGR2RGB)
+                            
+                    pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+                    convert_data = pytesseract.image_to_string(grey)
+                            
+                            
+                    with open('test.txt','w',encoding='utf-8') as file:
+                            file.write(convert_data)
+                            session['sucess'] = convert_data
+                            return redirect('/download')
                         
-                pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
-                convert_data = pytesseract.image_to_string(img_data)
-                        
-                        
-                with open('test.txt','w',encoding='utf-8') as file:
-                        file.write(convert_data)
-                        session['sucess'] = convert_data
-                        return redirect('/download')
-                    
-            except Exception as e:
-                return redirect('/')
+                  except Exception as e:
+                       return redirect('/')
+                
+            
 
 @app.route("/download",methods=['POST','GET'])
 def download():
